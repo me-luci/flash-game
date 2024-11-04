@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+            min-height: 100vh;
+            color: #fff;
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        #flashcards-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            display: none;
+            border: 2px solid #4CAF50;
+            background-color: #fff;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .card {
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 10px;
+            width: 130px;
+            text-align: center;
+            cursor: grab;
+            position: absolute;
+            background-color: #f9f9f9; /* Light background for cards */
+            color: #333; /* Dark text for readability */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50; /* Button color */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #45a049; /* Darker button color on hover */
+            transform: scale(1.05); /* Slight scale effect */
+        }
+        #score {
+            margin-top: 20px;
+            font-size: 24px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 10px;
+            border-radius: 5px;
+            color: #333; /* Dark text color */
+        }
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9); /* Light table background */
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            color: #333; /* Dark text color for visibility */
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: rgba(240, 240, 240, 0.7); /* Light gray for even rows */
+        }
+        tr:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.9); /* White for odd rows */
+        }
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* Light hover effect on rows */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Flashcard Game</h1>
+<div>
+    <input type="text" id="question" placeholder="Enter Question">
+    <input type="text" id="answer" placeholder="Enter Answer">
+    <button id="add-card">Add Flashcard</button>
+    <button id="start-game">Start Game</button>
+    <button id="reset-game">Reset Game</button>
+</div>
+<div id="flashcards-container"></div>
+<div id="score">Score: 0</div>
+<table>
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody id="matched-table-body"></tbody>
+</table>
+<footer style="width: 100%; background-color: #333; color: #fff; text-align: center; padding: 15px 0; position: relative; bottom: 0; margin-top: 20px;">
+    <p>&copy;BY JAGADISH ROUT  </p>
+    <button <a href="https://www.linkedin.com/in/jagdish-rout-297967278/"></a>CONTACT ME</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- this is working brooooooooooooool -->
